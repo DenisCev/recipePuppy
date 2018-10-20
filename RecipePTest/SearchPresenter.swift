@@ -45,9 +45,10 @@ extension SearchPresenter: SearchPresenterInterface {
         
         _interactor.getSearchResults(with: query!) { [weak self] (response) -> (Void) in
             self?._handleSearchListResult(response.result)
+            
          }
     }
-
+    
     func viewDidLoad() {
         
     }
@@ -56,13 +57,12 @@ extension SearchPresenter: SearchPresenterInterface {
         return 1
     }
     
-    func numberOrItems(in section: Int) -> Int {
+    func numberOfItems(in section: Int) -> Int {
         return _items.count
     }
     
-    func item(at indexPath: IndexPath) -> SearchViewItemInterface {
-        return _items[indexPath.row] as! SearchViewItemInterface
-    }
+    func item(at indexPath: IndexPath) -> ResultModel {
+        return _items[indexPath.row]  }
     
     func didSelectItem(at indexPath: IndexPath) {
         //let result = _items[indexPath.row]
@@ -75,8 +75,7 @@ extension SearchPresenter: SearchPresenterInterface {
         switch result {
         case .success(let searchObject):
             _items = searchObject.results!
-            
-            //_view.setEmptyPlaceholderHidden(_items.count > 0)
+           
         case .failure(let error):
             _wireframe.showErrorAlert(with: error.message)
         }

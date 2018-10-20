@@ -26,8 +26,8 @@ protocol SearchPresenterInterface: PresenterInterface {
     func didSelectSearchAction(with query: String?)
     
     func numberOfSections() -> Int
-    func numberOrItems(in section: Int) -> Int
-    func item(at indexPath: IndexPath) -> SearchViewItemInterface
+    func numberOfItems(in section: Int) -> Int
+    func item(at indexPath: IndexPath) -> ResultModel
     func didSelectItem(at indexPath: IndexPath)
     
 }
@@ -37,7 +37,9 @@ protocol SearchInteractorInterface: InteractorInterface {
     func getSearchResults(with searchQuery:String,_ completion: @escaping SearchListCompletionBlock) -> DataRequest
 }
 
-protocol SearchViewItemInterface {
+protocol SearchViewItemInterface: PresenterInterface {
     var title: String? { get }
     var imageURL: URL? { get }
+    var ingredients : String? { get }
+    var thumbnail : String? { get }
 }

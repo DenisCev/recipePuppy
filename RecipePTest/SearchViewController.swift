@@ -24,8 +24,11 @@ final class SearchViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        presenter.viewDidLoad()
+        tableView.dataSource = self
+        tableView.delegate = self
     }
+
 }
 
 // MARK: - Extensions -
@@ -36,14 +39,14 @@ extension SearchViewController: UISearchBarDelegate {
         presenter.didSelectSearchAction(
             with: searchBar.text
         )
-        tableView.reloadData()
-        
     }
 }
 
 extension SearchViewController: SearchViewInterface {
     internal func reloadData() {
-        tableView.reloadData()
+        //DispatchQueue.main.async {
+            self.tableView.reloadData()
+        //}
     }
 
   
@@ -56,7 +59,7 @@ extension SearchViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return presenter.numberOrItems(in: section)
+        return presenter.numberOfItems(in: section)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

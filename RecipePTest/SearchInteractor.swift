@@ -21,6 +21,7 @@ extension SearchInteractor: SearchInteractorInterface {
 
     @discardableResult
     internal func getSearchResults(with searchQuery:String, _ completion: @escaping SearchListCompletionBlock) -> DataRequest {
+
         return _searchService.getSearchResults(with:searchQuery, completion)
     }
 

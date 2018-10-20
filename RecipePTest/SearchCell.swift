@@ -14,11 +14,11 @@ class SearchCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-
+       
     }
     
     
-    func configure(with item: SearchViewItemInterface) {
+    func configure(with item: ResultModel) {
         cellTextLabel.text = item.title
 
     }
