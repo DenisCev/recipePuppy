@@ -40,6 +40,10 @@ extension SearchViewController: UISearchBarDelegate {
             with: searchBar.text
         )
     }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        self.view.endEditing(true)
+    }
 }
 
 extension SearchViewController: SearchViewInterface {
