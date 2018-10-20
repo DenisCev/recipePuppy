@@ -9,6 +9,16 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>AlamofireObjectMapper.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>ObjectMapper.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-RecipePTest.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -22,7 +32,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>3069237070FDD3A7C6EAE88CB681EA55</key>
+		<key>2F5622F3B18DF497981AB58C6D1FC72F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5183EA6E57F98EE8E521A5FD5473F14C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -32,7 +47,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DDEA63DDA2681E376BE45EA9BCB292D6</key>
+		<key>9502FB01641FBABB78522037E882757B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B8D00A2F3B3EB5A0662BB07A5CFD0454</key>
 		<dict>
 			<key>primary</key>
 			<true/>

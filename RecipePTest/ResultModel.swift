@@ -7,10 +7,22 @@
 //
 
 import Foundation
+import ObjectMapper
 
-struct ResultModel{
-    let title : String?
-    let href : String?
-    let ingredients : String?
-    let thumbnail : String?
+class ResultModel: Mappable{
+    var title : String?
+    var href : String?
+    var ingredients : String?
+    var thumbnail : String?
+    
+    required init?(map: Map){
+        
+    }
+    
+    func mapping(map: Map) {
+        title <- map["title"]
+        href <- map["href"]
+        ingredients <- map["ingredients"]
+        thumbnail <- map["thumbnail"]
+    }
 }

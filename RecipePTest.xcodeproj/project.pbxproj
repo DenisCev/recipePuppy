@@ -25,10 +25,12 @@
 		6EA8B0AB2179E84000D385F2 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA8B0A62179E84000D385F2 /* SearchViewController.swift */; };
 		6EA8B0AC2179E84000D385F2 /* SearchWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA8B0A72179E84000D385F2 /* SearchWireframe.swift */; };
 		6EA8B0AE2179EA9100D385F2 /* SearchViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EA8B0AD2179EA9100D385F2 /* SearchViewController.storyboard */; };
+		6EC50FDB217AB6A100EEAB5A /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC50FDA217AB6A100EEAB5A /* APIError.swift */; };
 		6EF5E060217AA0090051EFC5 /* RecipePuppyNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF5E05F217AA0090051EFC5 /* RecipePuppyNavigationController.swift */; };
 		6EF5E064217AA0360051EFC5 /* APIConstans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF5E063217AA0360051EFC5 /* APIConstans.swift */; };
 		6EF5E066217AA0E30051EFC5 /* SearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF5E065217AA0E30051EFC5 /* SearchService.swift */; };
 		6EF5E068217AA1050051EFC5 /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF5E067217AA1050051EFC5 /* SearchCell.swift */; };
+		6EF5E06E217AB6370051EFC5 /* ErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF5E06D217AB6370051EFC5 /* ErrorMessage.swift */; };
 		87AEB4EE6E4CCCD7EC3F3087 /* Pods_RecipePTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F98868DE42490554E4C976AB /* Pods_RecipePTest.framework */; };
 /* End PBXBuildFile section */
 
@@ -76,10 +78,12 @@
 		6EA8B0A62179E84000D385F2 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		6EA8B0A72179E84000D385F2 /* SearchWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchWireframe.swift; sourceTree = "<group>"; };
 		6EA8B0AD2179EA9100D385F2 /* SearchViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SearchViewController.storyboard; sourceTree = "<group>"; };
+		6EC50FDA217AB6A100EEAB5A /* APIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		6EF5E05F217AA0090051EFC5 /* RecipePuppyNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipePuppyNavigationController.swift; sourceTree = "<group>"; };
 		6EF5E063217AA0360051EFC5 /* APIConstans.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIConstans.swift; sourceTree = "<group>"; };
 		6EF5E065217AA0E30051EFC5 /* SearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchService.swift; sourceTree = "<group>"; };
 		6EF5E067217AA1050051EFC5 /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
+		6EF5E06D217AB6370051EFC5 /* ErrorMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorMessage.swift; sourceTree = "<group>"; };
 		F98868DE42490554E4C976AB /* Pods_RecipePTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RecipePTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -213,6 +217,8 @@
 			isa = PBXGroup;
 			children = (
 				6EF5E063217AA0360051EFC5 /* APIConstans.swift */,
+				6EF5E06D217AB6370051EFC5 /* ErrorMessage.swift */,
+				6EC50FDA217AB6A100EEAB5A /* APIError.swift */,
 			);
 			name = API;
 			sourceTree = "<group>";
@@ -400,11 +406,15 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-RecipePTest/Pods-RecipePTest-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -427,11 +437,13 @@
 				6EA8B09D2179E73300D385F2 /* BaseWireframe.swift in Sources */,
 				6EA8B0AA2179E84000D385F2 /* SearchPresenter.swift in Sources */,
 				6EA8B0A82179E84000D385F2 /* SearchInteractor.swift in Sources */,
+				6EC50FDB217AB6A100EEAB5A /* APIError.swift in Sources */,
 				6EA8B06A2179E72200D385F2 /* AppDelegate.swift in Sources */,
 				6EA8B0A12179E73300D385F2 /* ViewInterface.swift in Sources */,
 				6EF5E064217AA0360051EFC5 /* APIConstans.swift in Sources */,
 				6EA8B0AC2179E84000D385F2 /* SearchWireframe.swift in Sources */,
 				6E5595A0217A0DB700D37800 /* ResultModel.swift in Sources */,
+				6EF5E06E217AB6370051EFC5 /* ErrorMessage.swift in Sources */,
 				6EA8B0A02179E73300D385F2 /* UIStoryboardExtension.swift in Sources */,
 				6EA8B0A92179E84000D385F2 /* SearchInterfaces.swift in Sources */,
 				6EF5E060217AA0090051EFC5 /* RecipePuppyNavigationController.swift in Sources */,

@@ -6,8 +6,8 @@
 //  Copyright © 2018 Denis Menendez. All rights reserved.
 //
 
-import Foundation
 import Alamofire
+import AlamofireObjectMapper
 
 typealias SearchListCompletionBlock = (DataResponse<SearchModel>) -> (Void)
 
@@ -20,14 +20,13 @@ class SearchService: NSObject {
             "q" : searchQuery
         ]
         
-        let resp = Alamofire.request(
+        let response = Alamofire.request(
             APIConstants.URLBase,
             method:  .get,
             parameters: parameters
-            )
-        print("resp\(resp)")
+            ).responseObject(completionHandler: completion)
         
-        return resp
+        return response
     
     }
  

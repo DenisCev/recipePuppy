@@ -36,6 +36,8 @@ extension SearchViewController: UISearchBarDelegate {
         presenter.didSelectSearchAction(
             with: searchBar.text
         )
+        tableView.reloadData()
+        
     }
 }
 

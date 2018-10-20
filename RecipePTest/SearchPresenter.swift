@@ -44,7 +44,6 @@ extension SearchPresenter: SearchPresenterInterface {
     func didSelectSearchAction(with query: String?) {
         
         _interactor.getSearchResults(with: query!) { [weak self] (response) -> (Void) in
-            print(response)
             self?._handleSearchListResult(response.result)
          }
     }
@@ -74,12 +73,12 @@ extension SearchPresenter: SearchPresenterInterface {
     
     private func _handleSearchListResult(_ result: Result<SearchModel>) {
         switch result {
-        case .success(let jsonObject):
-            _items = jsonObject.results!
+        case .success(let searchObject):
+            _items = searchObject.results!
+            
             //_view.setEmptyPlaceholderHidden(_items.count > 0)
         case .failure(let error):
-            print(error);
-            //_wireframe.showErrorAlert(with: error.message)
+            _wireframe.showErrorAlert(with: error.message)
         }
     }
 }
