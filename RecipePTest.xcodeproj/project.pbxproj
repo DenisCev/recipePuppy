@@ -25,6 +25,10 @@
 		6EA8B0AB2179E84000D385F2 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA8B0A62179E84000D385F2 /* SearchViewController.swift */; };
 		6EA8B0AC2179E84000D385F2 /* SearchWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA8B0A72179E84000D385F2 /* SearchWireframe.swift */; };
 		6EA8B0AE2179EA9100D385F2 /* SearchViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EA8B0AD2179EA9100D385F2 /* SearchViewController.storyboard */; };
+		6EF5E060217AA0090051EFC5 /* RecipePuppyNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF5E05F217AA0090051EFC5 /* RecipePuppyNavigationController.swift */; };
+		6EF5E064217AA0360051EFC5 /* APIConstans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF5E063217AA0360051EFC5 /* APIConstans.swift */; };
+		6EF5E066217AA0E30051EFC5 /* SearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF5E065217AA0E30051EFC5 /* SearchService.swift */; };
+		6EF5E068217AA1050051EFC5 /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF5E067217AA1050051EFC5 /* SearchCell.swift */; };
 		87AEB4EE6E4CCCD7EC3F3087 /* Pods_RecipePTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F98868DE42490554E4C976AB /* Pods_RecipePTest.framework */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +76,10 @@
 		6EA8B0A62179E84000D385F2 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		6EA8B0A72179E84000D385F2 /* SearchWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchWireframe.swift; sourceTree = "<group>"; };
 		6EA8B0AD2179EA9100D385F2 /* SearchViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SearchViewController.storyboard; sourceTree = "<group>"; };
+		6EF5E05F217AA0090051EFC5 /* RecipePuppyNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipePuppyNavigationController.swift; sourceTree = "<group>"; };
+		6EF5E063217AA0360051EFC5 /* APIConstans.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIConstans.swift; sourceTree = "<group>"; };
+		6EF5E065217AA0E30051EFC5 /* SearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchService.swift; sourceTree = "<group>"; };
+		6EF5E067217AA1050051EFC5 /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
 		F98868DE42490554E4C976AB /* Pods_RecipePTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RecipePTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -134,9 +142,11 @@
 		6EA8B0682179E72200D385F2 /* RecipePTest */ = {
 			isa = PBXGroup;
 			children = (
+				6EF5E06A217AA5560051EFC5 /* API */,
 				6EA8B0972179E73300D385F2 /* Base VIPER Interfaces V1 */,
 				6EA8B0A22179E73700D385F2 /* Search */,
 				6EA8B0692179E72200D385F2 /* AppDelegate.swift */,
+				6EF5E05F217AA0090051EFC5 /* RecipePuppyNavigationController.swift */,
 				6EA8B0702179E72200D385F2 /* Assets.xcassets */,
 				6EA8B0722179E72200D385F2 /* LaunchScreen.storyboard */,
 				6EA8B0752179E72200D385F2 /* Info.plist */,
@@ -177,8 +187,9 @@
 		6EA8B0A22179E73700D385F2 /* Search */ = {
 			isa = PBXGroup;
 			children = (
-				6E55959E217A0DB700D37800 /* ResultModel.swift */,
-				6E55959F217A0DB700D37800 /* SearchModel.swift */,
+				6EF5E06C217AA5920051EFC5 /* Cell */,
+				6EF5E06B217AA5690051EFC5 /* Service */,
+				6EF5E069217AA5420051EFC5 /* Models */,
 				6EA8B0A32179E84000D385F2 /* SearchInteractor.swift */,
 				6EA8B0A42179E84000D385F2 /* SearchInterfaces.swift */,
 				6EA8B0A52179E84000D385F2 /* SearchPresenter.swift */,
@@ -187,6 +198,39 @@
 				6EA8B0AD2179EA9100D385F2 /* SearchViewController.storyboard */,
 			);
 			name = Search;
+			sourceTree = "<group>";
+		};
+		6EF5E069217AA5420051EFC5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6E55959F217A0DB700D37800 /* SearchModel.swift */,
+				6E55959E217A0DB700D37800 /* ResultModel.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		6EF5E06A217AA5560051EFC5 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				6EF5E063217AA0360051EFC5 /* APIConstans.swift */,
+			);
+			name = API;
+			sourceTree = "<group>";
+		};
+		6EF5E06B217AA5690051EFC5 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				6EF5E065217AA0E30051EFC5 /* SearchService.swift */,
+			);
+			name = Service;
+			sourceTree = "<group>";
+		};
+		6EF5E06C217AA5920051EFC5 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				6EF5E067217AA1050051EFC5 /* SearchCell.swift */,
+			);
+			name = Cell;
 			sourceTree = "<group>";
 		};
 		FB2400BAD87C1271BA363B05 /* Pods */ = {
@@ -375,6 +419,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6EF5E068217AA1050051EFC5 /* SearchCell.swift in Sources */,
+				6EF5E066217AA0E30051EFC5 /* SearchService.swift in Sources */,
 				6E5595A1217A0DB700D37800 /* SearchModel.swift in Sources */,
 				6EA8B09E2179E73300D385F2 /* InteractorInterface.swift in Sources */,
 				6EA8B0AB2179E84000D385F2 /* SearchViewController.swift in Sources */,
@@ -383,10 +429,12 @@
 				6EA8B0A82179E84000D385F2 /* SearchInteractor.swift in Sources */,
 				6EA8B06A2179E72200D385F2 /* AppDelegate.swift in Sources */,
 				6EA8B0A12179E73300D385F2 /* ViewInterface.swift in Sources */,
+				6EF5E064217AA0360051EFC5 /* APIConstans.swift in Sources */,
 				6EA8B0AC2179E84000D385F2 /* SearchWireframe.swift in Sources */,
 				6E5595A0217A0DB700D37800 /* ResultModel.swift in Sources */,
 				6EA8B0A02179E73300D385F2 /* UIStoryboardExtension.swift in Sources */,
 				6EA8B0A92179E84000D385F2 /* SearchInterfaces.swift in Sources */,
+				6EF5E060217AA0090051EFC5 /* RecipePuppyNavigationController.swift in Sources */,
 				6EA8B09F2179E73300D385F2 /* PresenterInterface.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

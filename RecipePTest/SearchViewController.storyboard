@@ -23,7 +23,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="AIH-4j-BtJ">
-                                <rect key="frame" x="0.0" y="38" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="25" width="375" height="44"/>
                                 <color key="barTintColor" red="1" green="0.75214557270000004" blue="0.49939416320000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -31,14 +31,14 @@
                                 </connections>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cDX-w8-cAZ">
-                                <rect key="frame" x="0.0" y="82" width="375" height="585"/>
+                                <rect key="frame" x="0.0" y="69" width="375" height="598"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SearchCell" id="KFq-ui-GKc" customClass="SearchCell" customModule="RecipePTest" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KFq-ui-GKc" id="oWC-fx-eP7">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EjO-yQ-Gh5">
@@ -69,7 +69,7 @@
                             <constraint firstItem="cDX-w8-cAZ" firstAttribute="top" secondItem="AIH-4j-BtJ" secondAttribute="bottom" id="PAo-eW-V5e"/>
                             <constraint firstItem="cDX-w8-cAZ" firstAttribute="leading" secondItem="OxG-0q-ugx" secondAttribute="leading" id="UwP-gy-Isc"/>
                             <constraint firstItem="l7X-2l-Oh0" firstAttribute="top" secondItem="cDX-w8-cAZ" secondAttribute="bottom" id="gCl-Kj-z4I"/>
-                            <constraint firstItem="AIH-4j-BtJ" firstAttribute="top" secondItem="If1-o0-viL" secondAttribute="bottom" constant="18" id="ps6-5T-qm0"/>
+                            <constraint firstItem="AIH-4j-BtJ" firstAttribute="top" secondItem="If1-o0-viL" secondAttribute="bottom" constant="5" id="ps6-5T-qm0"/>
                         </constraints>
                     </view>
                     <connections>
