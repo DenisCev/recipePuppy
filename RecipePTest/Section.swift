@@ -2,7 +2,7 @@
 //  Section.swift
 //  RecipePTest
 //
-//  Created by Pablo Vélez  on 20/10/18.
+//  Created by Denis Menendez on 20/10/18.
 //  Copyright © 2018 Denis Menendez. All rights reserved.
 //
 
